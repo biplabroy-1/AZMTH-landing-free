@@ -12,7 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, EnterIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
@@ -54,8 +54,8 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
-              ShadcnUI/React
+              {/* <LogoIcon /> */}
+              AZMTH
             </a>
           </NavigationMenuItem>
 
@@ -63,10 +63,7 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -102,8 +99,8 @@ export const Navbar = () => {
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    <EnterIcon className="mr-2 w-5 h-5" />
+                    Login
                   </a>
                 </nav>
               </SheetContent>
@@ -133,8 +130,8 @@ export const Navbar = () => {
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              <EnterIcon className="mr-2 w-5 h-5" />
+              Login
             </a>
 
             <ModeToggle />
